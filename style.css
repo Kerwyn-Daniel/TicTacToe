@@ -1,0 +1,77 @@
+/* 
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: bisque;
+}
+
+.square{
+    /*grid-area: 200px; 
+    width: 200px;
+    height:200px; 
+    background-color: cadetblue;
+    border: solid 6px black;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Board{
+    width: 600px;
+    height:600px;
+    background-color: black;
+    display:flex;
+    flex-wrap: wrap;
+    border: solid 1px black;
+}  */
+
+
+
+/* Creating the shapes to input first */
+
+.Circle{
+
+    height: 190px;
+    width: 190px;
+    border-radius: 50%;
+    border: 14px solid rgb(255, 72, 0);
+    box-sizing: border-box;
+    /* color: crimson;  */
+}
+/*cross is multiple aspects to build*/
+.Cross{
+
+    height: 190px;
+    width: 190px;
+    position:   relative;
+    transform: rotate(45deg);
+    /* border: 14px solid orange;
+    box-sizing: border-box; */
+    color: crimson; 
+}
+
+.Cross:before, .Cross:after{
+    content:"";
+    position:absolute;
+    background-color: darkorchid; 
+}
+
+.Cross:before{
+    left: 50%;
+    width:30%;
+    margin-left: -15%;
+    height: 100%;
+}
+
+.Cross:after{
+    top: 50%;
+    height:30%;
+    margin-top: -15%;
+    width: 100%;
+}
