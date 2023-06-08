@@ -55,7 +55,7 @@ if(checkItem(target,turn)&& !restart){
             else{
                 turn="Circle";
             }
-            indis.innerText="Okay, "+turn+" its your go!!";
+            indis.innerText="Interesting...Okay, "+turn+" its your go!!";
         }
         
     }
@@ -67,7 +67,7 @@ function checkItem(target,turn){
     let id = target.id;
     if(startCells[id] == ""){
     startCells [id] = turn;
-    indis.innerText="Interesting...";
+    indis.innerText="Game is oooveeer Bro!!";
     return true;
     }
     indis.innerText="Invalid move";
@@ -100,3 +100,14 @@ function checkTie(){
 }
 
 const timerText = document.getElementById("timer-text");
+const btnStart = document.getElementById("btn-start");
+const btnPause = document.getElementById("btn-pause");
+let count = 0;
+
+btnStart.addEventListener("click",function(){
+setInterval(function(){
+    count += 1;
+    timerText.textContent = count;
+    console.log("hi test");
+}, 1000);
+});
