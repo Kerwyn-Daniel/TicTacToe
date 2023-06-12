@@ -99,6 +99,7 @@ function checkTie(){
     return true;
 }
 
+//time test
 const timerText = document.getElementById("timer-text");
 const btnStart = document.getElementById("btn-start");
 const btnPause = document.getElementById("btn-pause");
